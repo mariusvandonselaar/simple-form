@@ -10,8 +10,8 @@ const jsonvalidator = new JSONValidator();
 // The "(^\\S.*\\S$)|(^\\S$)" regex checks to make sure the string doesn't have any leading or trailing space.
 const jsonschemaForm = {
 	"type": "object",
-    "additionalProperties": false,
-    "minProperties": 5,
+	"additionalProperties": false,
+	"minProperties": 5,
 	"properties": {
 		"firstname": {
 			"type": "string",
