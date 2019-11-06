@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title> A Simple Form </title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<div class="w3-container w3-center">
+			<button onclick="$('#modal-form').show()" class="w3-display-middle w3-btn w3-blue">Fill in The Form</button>
+		</div>
+		<div class="w3-modal w3-padding-64" id="modal-form">
+			<div class="w3-modal-content w3-card-4">
+				<header class="w3-container w3-center w3-blue"> 
+					<span onclick="$('#modal-form').hide()" class="w3-button w3-display-topright">&times;</span>
+					<h2>The Form</h2>
+				</header>
+				<div class="w3-container w3-left-align">
+					<h4 class="w3-center w3-text-red" id="form-required" style="display:none">Please fill in all the required fields</h1>
+					<br>
+					<label for="form-firstname">First Name<span class="w3-text-red">*</span></label>
+					<input class="w3-input" type="text" id="form-firstname" autocomplete="given-name"><br>
+					<label for="form-surname">Surname<span class="w3-text-red">*</span></label>
+					<input class="w3-input" type="text" id="form-surname" autocomplete="family-name"><br>
+					<label for="form-address">Address<span class="w3-text-red">*</span></label>
+					<input class="w3-input" type="text" id="form-address" autocomplete="address-line1"><br>
+					<label for="form-city">City<span class="w3-text-red">*</span></label>
+					<input class="w3-input" type="text" id="form-city" autocomplete="address-level2"><br>
+					<label for="form-postcode">Post Code<span class="w3-text-red">*</span></label>
+					<input class="w3-input" type="text" id="form-postcode" autocomplete="postal-code"><br>
+					<button class="w3-button w3-blue" id="form-submit">Submit</button><br><br>
+				</div>
+			</div>
+		</div>
+		<div id="modal-loading" class="w3-modal">
+			<div class="w3-container w3-center">
+				<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+			</div>
+		</div>
+		<div id="modal-result" class="w3-modal">
+			<div class="w3-modal-content" id="result-success">
+				<header class="w3-container w3-center w3-green">
+					<span onclick="$('#modal-result').hide()" class="w3-button w3-display-topright">&times;</span>
+					<h2>Submitted Successfully</h2>
+				</header>
+			</div>
+			<div class="w3-modal-content" id="result-error">
+				<header class="w3-container w3-center w3-red">
+					<span onclick="$('#modal-result').hide()" class="w3-button w3-display-topright">&times;</span>
+					<h2>An Error Has Occurred</h2>
+				</header>
+			</div>
+		</div>
+	</body>
+</html>
